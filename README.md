@@ -16,7 +16,7 @@ Takes an an array of elements and outputs a node with the appropriate children a
 -   `$0`  [0] name {String} this is the node name such as `'div'`, `'a'` or `'p'`
 -   `$0`  [1] attrs {Object} these are the attributes of the object you want to set.
 -   `$0`  [2] children {Array} an array of {Domlette} or {String} to append as children
--   `$0`  [3] onMount {function} a callback to be called with the node reference once the node has been added to it's
+-   `$0`  [3] onMount {function} a callback to be called with the node reference once the node has been added to its
     parent
 
 Returns **[Node](https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling)** a DOM Node created from the {Domlette} passed in
@@ -27,7 +27,7 @@ Mount an {Array} of {Domlette}s to the parent node
 
 **Parameters**
 
--   `parrent`  {Node} the parent node to append to
+-   `parent`  {Node} the parent node to append to
 -   `elements`  {Array<Domlette>} the Domlettes to append to the parent
 
 
