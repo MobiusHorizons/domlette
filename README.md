@@ -30,9 +30,7 @@ Mount an {Array} of {Domlette}s to the parent node
 -   `parent`  {Node} the parent node to append to
 -   `elements`  {Array<Domlette>} the Domlettes to append to the parent
 
-
 ## Example
-
 
 ```javascript
 let hiddenNode = null;
@@ -63,5 +61,3 @@ mount(document.body, [
 ```
 
 See example on [Codepen](http://codepen.io/MobiusHorizons/full/xqqqPe/)
-
-
