@@ -13,7 +13,7 @@
 export function h([name, attrs = {}, children = [], onMount]){ 
   const node = document.createElement(name);
   
-  for (attr in attrs){
+  for (let attr in attrs){
     if (typeof attrs[attr] === 'string'){
       node.setAttribute(attr, attrs[attr]);
     } else {

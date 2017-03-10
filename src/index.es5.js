@@ -14,7 +14,7 @@ function h(_){
   var onMount  = _[3];
   var node = document.createElement(name);
   
-  for (prop in props){
+  for (var prop in props){
     if (typeof props[prop] === 'string'){
       node.setAttribute(prop, props[prop]);
     } else {
