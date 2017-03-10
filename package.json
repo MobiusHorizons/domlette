@@ -1,9 +1,10 @@
 {
   "name": "domlette",
   "amdName": "domlette",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Miniscule DOM creation library",
   "author": "MobiusHorizons <codemobius@gmail.com>",
+  "repository": "MobiusHorizons/domlette",
   "license": "MIT",
   "jsnext:src": "src/index.es6.js",
   "jsnext:main": "dist/domlette.es6.js",
