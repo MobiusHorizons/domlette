@@ -1,7 +1,7 @@
 {
   "name": "domlette",
   "amdName": "domlette",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Miniscule DOM creation library",
   "author": "MobiusHorizons <codemobius@gmail.com>",
   "repository": "MobiusHorizons/domlette",
