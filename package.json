@@ -1,0 +1,49 @@
+{
+  "name": "domlette",
+  "amdName": "domlette",
+  "version": "1.0.0",
+  "description": "Miniscule DOM creation library",
+  "author": "MobiusHorizons <codemobius@gmail.com>",
+  "license": "MIT",
+  "jsnext:src": "src/index.es6.js",
+  "jsnext:main": "dist/domlette.es6.js",
+  "es5:src": "src/index.es5.js",
+  "main": "dist/domlette.js",
+  "umd:main": "dist/domlette.umd.js",
+  "scripts": {
+    "bump": "standard-version",
+    "build": "npm-run-all clean rollup:umd -p minify:* -p size:*",
+    "clean": "rimraf dist && mkdirp dist",
+    "rollup:umd": "rollup -c rollup.config.js -m -f umd -n $npm_package_amdName $npm_package_es5_src -o $npm_package_umd_main",
+    "minify:cjs": "uglifyjs $npm_package_es5_src -cm toplevel -o $npm_package_main -p relative --source-map ${npm_package_main}.map",
+    "minify:umd": "uglifyjs $npm_package_umd_main -cm -o $npm_package_umd_main -p relative --source-map ${npm_package_umd_main}.map",
+    "minify:es6": "babili ${npm_package_jsnext_src} --out-file $npm_package_jsnext_main --source-maps",
+    "size:es5": "echo \"Gzipped Size (ES5): $(strip-json-comments --no-whitespace $npm_package_main | gzip-size | pretty-bytes)\"",
+    "size:es6": "echo \"Gzipped Size (ES6): $(strip-json-comments --no-whitespace $npm_package_jsnext_main | gzip-size | pretty-bytes)\"",
+    "docs": "documentation readme src/index.es6.js --section API -q",
+    "release": "npm run build -s && npm run bump && git push --follow-tags origin master && npm publish"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babili": "0.0.12",
+    "chai": "^3.5.0",
+    "eslint": "^3.13.1",
+    "flow-bin": "^0.38.0",
+    "gzip-size-cli": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "mocha": "^3.2.0",
+    "npm-run-all": "^2.1.1",
+    "pretty-bytes-cli": "^2.0.0",
+    "rimraf": "^2.5.2",
+    "rollup": "^0.41.4",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0",
+    "standard-version": "^4.0.0",
+    "strip-json-comments-cli": "^1.0.1",
+    "uglify-js": "^2.6.2"
+  }
+}
