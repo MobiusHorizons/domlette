@@ -8,7 +8,7 @@ consider [Preact](https://github.com/developit/preact) or [React](https://github
 
 ### h
 
-Takes an an array of elements and outputs a node with the appropriate children attached
+Takes an array of elements and outputs a node with the appropriate children attached
 
 **Parameters**
 
